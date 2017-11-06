@@ -87,6 +87,15 @@ body {
     min-width: 200px;
     font-size: 18px;
 }
+.popup input{
+    margin-top:8px;
+    height: 30px;
+    min-width: 200px;
+    font-size: 18px;
+}
+.popup {
+    text-align: center;
+}
 .header-container,
 .footer-container,
 .main aside {
@@ -380,7 +389,7 @@ nav a:hover {
     }
 }
 
-.drag {
+.tag {
     display: inline-block;
     width: auto;
     height: auto;
@@ -393,6 +402,9 @@ nav a:hover {
     padding:5px;
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
+  }
+  .drag{
+      position: absolute;
   }
   
   #drag-me::before {
@@ -436,8 +448,26 @@ p{
 	background: #FFCC00;
 }
 .popup{
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     width: 500px;
     height: 200px;
+    border-radius: 5px;
+}
+.tagnew{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    /* min-height: 6.5em; */
+    margin: 8px;
+  
+    background-color: #29e;
+    color: white;
+    border-radius: 0.75em;
+    padding:5px;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+}
+.emojinew{
+    width:40px;
 }
