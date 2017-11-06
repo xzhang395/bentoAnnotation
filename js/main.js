@@ -2,29 +2,17 @@ var tags = [];
 var flagtag = 0;
 interact('.draggable')
     .draggable({
-        // enable inertial throwing
         inertia: true,
-        // keep the element within the area of it's parent
-        //   restrict: {
-        //     restriction: "parent",
-        //     endOnly: true,
-        //     elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-        //   },
-        // enable autoScroll
         autoScroll: true,
-
-        // call this function on every dragmove event
         onmove: dragMoveListener,
         // call this function on every dragend event
         onend: function (event) {
-            // var textEl = event.target.querySelector('p');
-
-            // textEl && (textEl.textContent =
-            //   'moved a distance of '
-            //   + (Math.sqrt(event.dx * event.dx +
-            //                event.dy * event.dy)|0) + 'px');
         }
-    });
+    })
+    .resizable({
+        preserveAspectRatio: true,
+        edges: { left: true, right: true, bottom: true, top: true }
+      });
 
 function dragMoveListener(event) {
     var target = event.target;
@@ -32,10 +20,6 @@ function dragMoveListener(event) {
     // keep the dragged position in the data-x/data-y attributes
     x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
     y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-    // pagex = offset.left;
-    // pagey = offset.top;
-    // console.log("pagex"+pagex+"pagey"+pagey);
-    // console.log(target);
 
     // translate the element
     target.style.webkitTransform =
@@ -115,6 +99,7 @@ element.addEventListener("mouseup", function (e) {
         var cy = event.pageY;
         if ((cx < popx || cx > (popx + 500)) || (cy < popy || cy > (popy + 200))) {
             $(".popup").remove();
+            $(".comment").remove();
         }
     }
     else if (flag === 1) {
@@ -137,41 +122,70 @@ function search(ele) {
     }
 }
 
-    $(document).on('mousedown', '.tag', function(e) {
-        flagtag = 0;
-        console.log("mousedown");
-        console.log(this);
-        $('body').append(this);
-        // $("body").append("<div class='drag draggable tagnew'><p>" + "drag" + "</p></div>")
-        $(this).css("position", "absolute");
-        $(this).css("top", e.pageY);
-        $(this).css("left", e.pageX);
-        $(this).removeClass( "tag" ).addClass( "tagnew" );
-        updateTags(); 
-        
-      });
+$(document).on('mousedown', '.tag', function (e) {
+    $('body').append(this);
+    $(this).css("position", "absolute");
+    $(this).css("top", e.pageY);
+    $(this).css("left", e.pageX);
+    $(this).removeClass("tag").addClass("tagnew");
+    updateTags();
 
-    function updateTags() {
-        $(".tag").remove();
-        for (var i = 0; i < tags.length; i++) {
-            $(".header-container").append("<div class='draggable tag'><p>" + tags[i] + "</p></div>")
-            $(".popup").append("<div class='tag'><p>" + tags[i] + "</p></div>")
-        }
+});
 
+function updateTags() {
+    $(".tag").remove();
+    for (var i = 0; i < tags.length; i++) {
+        $(".header-container").append("<div class='draggable tag'><p>" + tags[i] + "</p></div>")
+        $(".popup").append("<div class='tag'><p>" + tags[i] + "</p></div>")
     }
 
-    function updateEmoji() {
-        $(".emoji").remove();
-            $(".floating-div").append("<img class='emoji draggable' src='img/love.png'><img class='emoji draggable' src='img/happiness.png'><img class='emoji draggable' src='img/indifferent.png'><img class='emoji draggable'src='img/sad.png'>")
+}
 
+function updateEmoji() {
+    $(".emoji").remove();
+    $(".floating-div").append(
+        "<img class='emoji draggable' src='img/love.png'><img class='emoji draggable' src='img/happiness.png'><img class='emoji draggable' src='img/indifferent.png'><img class='emoji draggable'src='img/sad.png'>" +
+        "<img class='emoji draggable'src='img/check.png'><img class='emoji draggable'src='img/cross.png'><img class='emoji draggable'src='img/question.png'>")
 
-    }
-    $(document).on('mousedown', '.emoji', function(e) {
-        $('body').append(this);
-        $(this).css("position", "absolute");
-        $(this).css("top", e.pageY);
-        $(this).css("left", e.pageX);
-        $(this).removeClass( "emoji" ).addClass( "emojinew" );
-        updateEmoji(); 
+}
+var firstDrag = true;
+$(document).on('mousedown', '.emoji', function (e) {
+    $('body').append(this);
+    $(this).css("position", "absolute");
+    $(this).css("top", e.pageY);
+    $(this).css("left", e.pageX);
+    $(this).removeClass("emoji").addClass("emojinew");
+    updateEmoji();
+    firstDrag = true;
+});
+//   $(document).on('mouseup', '.emoji', function(e) {
+//     $(".popup").remove();
+//     console.log("hey");
+//   });
+$(document).on('mouseup', '.emojinew', function (e) {
+    $(".popup").remove();
+    if (firstDrag) {
+        $(".comment").remove();
+        $("body").append("<div class='comment'><textarea rows='4' cols='50' placeholder='Add comment or note'/> <br/></div>")
+        $(".comment").css("top", event.pageY);
+        $(".comment").css("left", event.pageX + 46);
+        firstDrag = false;
+    }else{
+        $(".comment").remove();
         
-      });
+    }
+});
+
+$(document).on('click', '.emojinew', function (e) {
+    $(".popup").remove();
+        $(".comment").remove();
+        $("body").append("<div class='comment'><textarea rows='4' cols='50' placeholder='Add comment or note'/> <br/></div>")
+        $(".comment").css("top", event.pageY);
+        $(".comment").css("left", event.pageX + 46);
+});
+// $(document).on('mouseup', '.tag', function (e) {
+//     $(".popup").remove();
+// });
+$(document).on('mouseup', '.tagnew', function (e) {
+    $(".popup").remove();
+});
