@@ -1,0 +1,675 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://use.fontawesome.com/cd25451a30.js"></script>
+</head>
+
+<body>
+    <div class="header-container">
+        <input type="text" placeholder="Hit enter to add tag" class="search" onkeydown="search(this)" />
+        <br/>
+    </div>
+    <div class="sidebar">
+        <div class="floating-div">
+            <div class="emoji draggable">
+                <img src="img/love.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/happiness.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/indifferent.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/sad.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/check.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/cross.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/question.png">
+            </div>
+        </div>
+    </div>
+    <!-- <a href="camera4.html">
+        <div class="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+    </a> -->
+    <div class="main-container">
+        <div class="bk-w pr content-padd">
+            <article class="bk-detail-content pr">
+                <div class="inner">
+                    <div class="article-content article-padd">
+                        <div class="bk-at-top-tags font-pnova-semibold">
+                            <!-- ngRepeat: tag in article.tags -->
+                            <!-- ngIf: $index < 3 -->
+                            <a ng-repeat="tag in article.tags" href="/tag/gear" style="background: #90AF71;" class="tag-0"
+                                ng-if="$index < 3">Gear</a>
+                            <!-- end ngIf: $index < 3 -->
+                            <!-- end ngRepeat: tag in article.tags -->
+                            <!-- ngIf: $index < 3 -->
+                            <a ng-repeat="tag in article.tags" href="/tag/olympus" style="background: #435365;" class="tag-1"
+                                ng-if="$index < 3">Olympus</a>
+                            <!-- end ngIf: $index < 3 -->
+                            <!-- end ngRepeat: tag in article.tags -->
+                            <!-- ngIf: $index < 3 -->
+                            <a ng-repeat="tag in article.tags" href="/tag/om-d-e-m1-mark-ii" style="background: #E14545;"
+                                class="tag-2" ng-if="$index < 3">OM-D-E-M1-Mark-II</a>
+                            <!-- end ngIf: $index < 3 -->
+                            <!-- end ngRepeat: tag in article.tags -->
+                            <!-- ngIf: $index < 3 -->
+                            <!-- end ngRepeat: tag in article.tags -->
+                            <!-- ngIf: $index < 3 -->
+                            <!-- end ngRepeat: tag in article.tags -->
+                        </div>
+                        <h1 class="font-tisapro-regular bk-article-title ng-binding">Olympus OM-D E-M1 Mark II Hands-on Review</h1>
+                        <h6 class="font-pnova-semibold bk-article-subtitle ng-binding">Undoubtedly expensive, but worth it if you need the speed</h6>
+                        <div class="bk-article-titleimg">
+                            <!-- ngIf: article.banner_type == 'Image' -->
+                            <div ng-if="article.banner_type == 'Image'" class="ng-scope">
+                                <div width="100%" url="mainFixImg(article,'w_1920,c_fill,q_40')" custom-src="" class="ng-isolate-scope"
+                                    style="display: block;">
+                                    <img src="https://pictures.digitalrev.com/image/upload/w_1920,c_fill,q_40/v1478252194/aqr2mpc1lwyxdzhl9ta8.jpg">
+                                </div>
+                            </div>
+                            <!-- end ngIf: article.banner_type == 'Image' -->
+                            <!-- ngIf: article.banner_type == 'Video' -->
+                        </div>
+                        <div class="sk-dt-post-info font-tisapro-regular ng-binding">
+                            <span class="font-pnova-bold main-color name">BY
+                                <a ng-show="!article.owner.disable_public_profile" href="/author/25" class="ng-binding ng-hide">Ian Wong</a>
+                                <a class="normal ng-binding" ng-show="article.owner.disable_public_profile">Ian Wong</a>
+                            </span>
+                            <br>on 03 November 2016</div>
+                        <div class="bk-dt-share clearfix">
+                            <div class="inner pr">
+                                <div class="font-pnova-bold bk-dt-share-counts">
+                                    <span class="bk-share-t-count ng-binding" ng-show="article.share.count" style="">659</span>
+                                    <span class="bk-share-t-title ng-hide" ng-show="article.share.count == 0"
+                                        style="">SHARE</span>
+                                    <span class="bk-share-t-title" ng-show="article.share.count > 0" style="">Shares</span>
+                                </div>
+                                <ul class="bk-dt-share-ul">
+                                    <li class="facebook">
+                                        <a socialshare="" socialshare-provider="facebook" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                            socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" href="#">
+                                            <i></i>
+                                        </a>
+                                        <span class="font-pnova-bold">Share
+                                            <b>(1,024)</b>
+                                        </span>
+                                    </li>
+                                    <li class="twitter">
+                                        <a socialshare="" socialshare-provider="twitter" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                            socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" socialshare-via="digitalrev"
+                                            href="#">
+                                            <i></i>
+                                        </a>
+                                        <span class="font-pnova-bold">Tweet
+                                            <b>(32)</b>
+                                        </span>
+                                    </li>
+                                    <li class="google">
+                                        <a socialshare="" socialshare-provider="google+" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                            socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" href="#">
+                                            <i></i>
+                                        </a>
+                                        <span class="font-pnova-bold">Share</span>
+                                    </li>
+                                    <li class="more">
+                                        <a socialshare="" href="#">
+                                            <i></i>
+                                        </a>
+                                        <span class="font-pnova-bold"></span>
+                                        <div class="moreShares-wrapper">
+                                            <div class="moreShares pop-menu" style="display: block;text-align: center;">
+                                                <table style="width: 90%;margin: 0 auto;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="pin">
+                                                                <a socialshare="" socialshare-provider="pinterest" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                                                    socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review"
+                                                                    socialshare-media="https://pictures.digitalrev.com/image/upload/v1478252194/aqr2mpc1lwyxdzhl9ta8.jpg"
+                                                                    href="#">
+                                                                    <i></i>
+                                                                </a>
+                                                            </td>
+                                                            <td class="linkin">
+                                                                <a socialshare="" socialshare-provider="linkedin" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                                                    socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review"
+                                                                    href="#">
+                                                                    <i></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="stumbleUpon">
+                                                                <a socialshare="" socialshare-provider="stumbleupon" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                                                    socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review"
+                                                                    socialshare-media="https://pictures.digitalrev.com/image/upload/v1478252194/aqr2mpc1lwyxdzhl9ta8.jpg"
+                                                                    href="#">
+                                                                    <i></i>
+                                                                </a>
+                                                            </td>
+                                                            <td class="email">
+                                                                <a href="mailto:?subject=Olympus OM-D E-M1 Mark II Hands-on Review&amp;body=Undoubtedly expensive, but worth it if you need the speedhttp://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system">
+                                                                    <i></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- ngIf: $index == 0 -->
+                        <div ng-if="$index == 0" class="ng-scope">
+                            <script id="aniviewJS" src="https://play.aniview.com/5858ed930b8ee8851941a7bb/5983089928a0613893075c78/DigitalRev_Footer.js"></script>
+                        </div>
+                        <!-- end ngIf: $index == 0 -->
+                        <div class="bk-share-div-line clearfix"></div>
+                        <div class="sk-dt-ads-info">
+                            <!-- ngIf: article.is_nsfw == 0 -->
+                            <div id="div-gpt-ad-1433218247580-0" ng-if="article.is_nsfw == 0" data-ng-dfp-ad="div-gpt-ad-1433218247580-0"
+                                class="ng-scope ng-isolate-scope" style="width: 300px; height: 250px;" data-google-query-id="CKDKgNSNrNcCFSi1swodgeMDkw">
+                                <div id="google_ads_iframe_/105907171/bokeh03_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;">
+                                    <iframe frameborder="0" src="https://tpc.googlesyndication.com/safeframe/1-0-13/html/container.html"
+                                        id="google_ads_iframe_/105907171/bokeh03_0" title="3rd party ad content" name="" scrolling="no"
+                                        marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                                        style="border: 0px; vertical-align: bottom;"></iframe>
+                                </div>
+                            </div>
+                            <!-- end ngIf: article.is_nsfw == 0 -->
+                            <!-- ngIf: article.is_nsfw == 1 -->
+                        </div>
+                        <div class="bk-ads-div-line clearfix"></div>
+                        <div id="html" ng-bind-html="article.body" class="ng-binding">
+                            <p>At Photokina it took a lot of wheedling and pleading to get a sneak peak at the new flagship
+                                camera from Olympus. </p>
+                            <p>At the time, DRTV eventually got ushered into a small, white room, where we sworn to secrecy
+                                and shown the
+                                <a href="https://store.digitalrev.com/product/olympus-om-d-e-m1/MTEwNDkwOQ_A_A?utm_source=editorial&amp;utm_campaign=Olympus%20EM1%20II&amp;utm_medium=bodytext&amp;utm_content=Olympus%20OM-D%20E-M1%20Mark%20II%20Hands-on%20Review">OM-D E-M1 Mark II</a>. What we weren’t told however, was that it would cost US$2,000. That
+                                information
+                                <a href="http://www.digitalrev.com/article/olympus-om-d-e-m1-mark-ii-and-gh5-might-be-same-price-as-pentax-k-1">only came in furtive rumours later on</a>, along with the news that the Panasonic GH5, the
+                                other Micro Four Thirds flagship camera, will probably also cost as much. It’s a new, expensive
+                                age for mirrorless cameras and we aren’t sure how consumers will like that. </p>
+                            <div class="bk-dt-padd video">
+                                <iframe width="100%" height="450" src="//www.youtube.com/embed/NunaYzAtBIs" frameborder="0" allowfullscreen=""></iframe>
+                                <p class="caption"></p>
+                            </div>
+                            <p>Fast-forward a month however, and Olympus Hong Kong invited us to their launch event so that
+                                we could spend a little bit longer with the cameras. While undoubtedly the camera is more
+                                expensive than any Olympus mirrorless camera has ever been, it’s also (obviously) the best.
+                                There’s a lot to like for some Micro Four Thirds shooters, although it’s certainly not for
+                                every existing user – and probably not something that we would recommend switching to specifically
+                                MFT for.</p>
+                            <h2 class="clearfix" id="design">Design</h2>
+                            <div class="bk-dt-padd">
+                                <img alt="The AF button is available for easy customisation." src="https://pictures.digitalrev.com/image/upload/w_1400,c_fill,q_60/v1478252231/lzkac6yxcdkknskoxn4b.jpg"
+                                    width="100%">
+                                <p class="caption">The AF button is available for easy customisation.</p>
+                            </div>
+                            <p>Let’s talk about the ergonomics first. The camera is a huge pleasure to hold, and the grip is
+                                beautifully crafted. In fact, I’d say it has one of the nicer grips of any of the mirrorless
+                                cameras, Olympus have done a great job contouring the body so that it meshes well with a
+                                variety of hand sizes, and we especially have to complement the vertical battery grip, which
+                                fits in seamlessly. It’s smoothly integrated into the shape of the camera, and stands in
+                                stark contrast with the jagged vertical battery grip of the Fujifilm X-T2, which oddly juts
+                                out. Fujifilm gave us a typical PR answer when they explained why it didn’t fit in seamlessly,
+                                but Olympus users don’t have to worry about this on the OM-D E-M1 Mark II.
+                                <div style="width: 100%; margin: 0px auto; max-width: 640px;">
+                                    <div id="aniBox" style="overflow: hidden; transition: height 1s ease; opacity: 0; width: 640px; height: 1px;">
+                                        <div id="aniplayer_" style="position: absolute; top: -100000px;">
+                                            <div id="aniplayer_gui">
+                                                <div id="av-container" class=" desktop hide-controls" style="width: 640px; height: 360px;">
+                                                    <div id="av-inner">
+                                                        <div id="slot">
+                                                            <div id="imgpreloader"></div>
+                                                            <div id="preloader">
+                                                                <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                    viewBox="0 0 30 30" xml:space="preserve">
+                                                                    <g>
+                                                                        <path d="M23.3,14.9c0-0.4-0.3-0.9-0.8-1.2l-10-6.4c-1.1-0.7-2-0.1-2,1.3v7.5C15.8,13.7,23.1,14.9,23.3,14.9z M23.3,15 c-7.9,0.6-11.4,3.5-12.8,5.7v0.8c0,1.4,0.9,2,2,1.3l10-6.4C23.1,16,23.4,15.5,23.3,15z"></path>
+                                                                    </g>
+                                                                </svg>
+                                                                <svg class="circle" width="70" height="70" version="1.1"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="35" cy="35" r="32"></circle>
+                                                                </svg>
+                                                                <svg class="circle active" width="70" height="70" version="1.1"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <circle cx="35" cy="35" r="32"></circle>
+                                                                </svg>
+                                                            </div>
+                                                            <div id="videoslot" class="loaded" style="width: 640px; height: 360px;"></div>
+                                                        </div>
+                                                        <div id="gui">
+                                                            <div id="timeline" class=" av-bottom">
+                                                                <div id="timeline-buffer" style="width: 100%;"></div>
+                                                                <div id="timeline-moveto"></div>
+                                                                <div id="timeline-progress"></div>
+                                                            </div>
+                                                            <div id="buttons">
+                                                                <div id="left">
+                                                                    <div id="play-pause" class="pause" style="display: inline;"></div>
+                                                                    <div id="phone" style="display: none;">
+                                                                        <div class="icon"></div>
+                                                                        <div id="phone-num"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="right">
+                                                                    <div id="fullscreen" class="off" style="display: none;"></div>
+                                                                    <div id="share" style="display: none;"></div>
+                                                                    <div id="sound" style="display: none;">
+                                                                        <div class="off"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="big-play" style="display: none;"></div>
+                                                            <div id="timer" style="display: none;"></div>
+                                                            <div id="close-btn" style="display: inline;"></div>
+                                                            <div id="skip-btn" style="display: none;">Skip</div>
+                                                            <div id="aniview-credit" style="display: inline;">
+                                                                <span style="height: 14px; width: 80px; background-image: url(&quot;https://play.aniview.com/5858ed930b8ee8851941a7bb/59526d5028a06110545d0877/ads_by_hooly82x15.png&quot;);"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="anibid"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                            <div class="bk-dt-padd">
+                                <img alt="The Mark II is on the left, and the Mark I is on the right." src="https://pictures.digitalrev.com/image/upload/w_1400,c_fill,q_60/v1478252285/lfvwmi5ei6bnww9koh7o.jpg"
+                                    width="100%">
+                                <p class="caption">The Mark II is on the left, and the Mark I is on the right.</p>
+                            </div>
+                            <p>On initial impressions it looks almost identical to the original E-M1, but there are small differences,
+                                such as the previously mentioned grip, which is thicker and taller, and a few buttons which
+                                have been moved around. The Mark II is bulkier than its predecessor, and when you add on
+                                vertical hand grip, you get a vastly larger camera than most people expect for the MFT system.
+                                This isn’t always a disadvantage, because the larger telephoto lenses require this kind of
+                                weight to be balanced against. </p>
+                            <div class="bk-dt-padd">
+                                <img alt="Rugged build." src="https://pictures.digitalrev.com/image/upload/w_1400,c_fill,q_60/v1478252358/ijo4lbsduemfevuafqsv.jpg"
+                                    width="100%">
+                                <p class="caption">Rugged build.</p>
+                            </div>
+                            <p>As a camera intended for professionals and video shooters, the OM-D E-M1 Mark II more than justifies
+                                its extra weight. This is the first Olympus camera with 4K capabilities, so thankfully it
+                                allows for a headphone jack, as well as having a massively increased battery life. One downside
+                                is that photographers invested in old Olympus batteries have to upgrade, but the new 1720mAH
+                                batteries provide 50% more capacity. </p>
+                            <p>It also has a new LCD mechanism, which we’ve shown here in comparison to the Mark 1. It works
+                                very handily for video, and is a great improvement over the tilting screen on the original.</p>
+                            <div class="bk-dt-padd">
+                                <img alt="The new battery is significantly larger than the old one on the right." src="https://pictures.digitalrev.com/image/upload/w_1400,c_fill,q_60/v1478252382/xnhq5gcazpkxagshezv4.jpg"
+                                    width="100%">
+                                <p class="caption">The new battery is significantly larger than the old one on the right.</p>
+                            </div>
+                            <p>Since this is Olympus’ flagship model, and such a burst monster, it naturally has two SD card
+                                slots; the top one supports UHS-II cards, while the bottom one is UHS-I only.</p>
+                            <p>The viewfinder is responsive, and has a refresh rate of 120 fps and a minimum response time of
+                                five milliseconds. We had no complaints when testing it with the C-AF.</p>
+                            <h2 class="clearfix" id="image-quality">Image quality</h2>
+                            <div class="bk-dt-padd">
+                                <img alt="@ 1/1000s, f/2.8, ISO 4000" src="https://pictures.digitalrev.com/image/upload/w_1400,c_fill,q_60/v1478252492/s37otlzytz4vquafugqr.jpg"
+                                    width="100%">
+                                <p class="caption">@ 1/1000s, f/2.8, ISO 4000</p>
+                            </div>
+                            <p>This camera is all about the speed and capturing the right moment. To do this, it has a variety
+                                of modes including the new Pro Capture Mode, which can help capture the exact moment a photographer
+                                would want. It uses the silent electronic shutter to pre-capture a series of JPEG or RAW
+                                images, by activating once the photographer presses the shutter release halfway. Once they
+                                fully fire the shutter, the camera starts bursting again, but also will record the 14 previous
+                                frames. </p>
+                            <div class="bk-dt-padd">
+                                <video alt="" width="100%" controls="" autoplay="" loop="" src="https://pictures.digitalrev.com/video/upload/v1478253078/b1ie6oj76n46pd2bngj3.mp4"
+                                    muted="muted" poster="https://pictures.digitalrev.com/video/upload/v1478253078/b1ie6oj76n46pd2bngj3.jpg">
+                                    <source type="video/mp4" src="https://pictures.digitalrev.com/video/upload/v1478253078/b1ie6oj76n46pd2bngj3.mp4">
+                                    <source type="video/webm" src="https://pictures.digitalrev.com/video/upload/v1478253078/b1ie6oj76n46pd2bngj3.webm">
+                                </video>
+                                <p class="caption"></p>
+                            </div>
+                            <p>It’s incredibly fast to use, and the C-AF is in a similar league to that of the D500’s. We tested
+                                Olympus’ claims on the burst speed and found them to be accurate, with the 18 second continuous
+                                burst quite impressive. The buffer also cleared up quickly, so after each burst it wasn’t
+                                long before the camera was ready once more. </p>
+                            <figure>
+                                <img alt="" src="https://pictures.digitalrev.com/image/upload/w_1400,c_fill,q_60/v1478253338/qme8tximqu3f7actcvjd.jpg"
+                                    width="100%">
+                                <p class="caption"></p>
+                            </figure>
+                            <p>In terms of the actual image quality and ISO performance, we have to say that it’s not a huge
+                                improvement over any other M4/3 camera. Images are useable up to 1600, and while 3200 is
+                                passable when necessary, anything higher lacks detail due to excessive noise reduction. Even
+                                when it’s set on low, the noise just becomes too much to handle. </p>
+                            <p>And while the 6.5 IBIS is mind blowingly good, stablisation isn’t the most useful function for
+                                action photography. The IBIS would however, be fantastic for video, which provides an interesting
+                                option for M4/3 who will are deciding between this and Panasonic’s upcoming GH5.</p>
+                            <p>Having said all that, it does really depend on what medium photographers find themselves showcasing
+                                their work. If the work is to be printed on a large poster, the lack of quality at high ISOs
+                                might be noticeable. However, for social media and web use, which is how most photographers
+                                now generally share their work, the OM-D E-M1 Mark II can be fantastic. It might not get
+                                you the most detailed image, but with its speed, it will certainly ensure that you nail focus
+                                and get the photo. And after all, isn't that the point?</p>
+                            <figure>
+                                <img alt="@ 1/1000s, f/1.2, ISO 1600" src="https://pictures.digitalrev.com/image/upload/w_1400,c_fill,q_60/v1478252901/xdwsr7ndjnd3qmjvj1bo.jpg"
+                                    width="100%">
+                                <p class="caption">@ 1/1000s, f/1.2, ISO 1600</p>
+                            </figure>
+                            <h2 class="clearfix" id="conclusion">Conclusion</h2>
+                            <p>Many people look at the
+                                <a href="https://store.digitalrev.com/product/olympus-om-d-e-m1/MTEwNDkwOQ_A_A?utm_source=editorial&amp;utm_campaign=Olympus%20EM1%20II&amp;utm_medium=bodytext&amp;utm_content=Olympus%20OM-D%20E-M1%20Mark%20II%20Hands-on%20Review">OM-D E-M1 Mark II</a> and mock its size, but its defenders rightfully say that the a camera
+                                should be judged by its system. Long telephoto lenses for M4/3 are indeed smaller and more
+                                compact, and when used with this flagship model by Olympus, should be perfectly well balanced.
+                                If the Mark II were smaller, it might not feel as good, or have as much space for customisable
+                                buttons. While it is similar in size to the Sony a7R series or a small DSLR, the smaller
+                                lenses across the board ultimately do the system justice. This isn’t a camera that every
+                                M4/3 shooter needs, but it’s a fantastic option for professionals to upgrade into. </p>
+                            <p>However, it must be noted that since the image quality doesn’t appear to have evolved so much,
+                                it’s difficult to shoot at high shutter speeds without pumping up the ISO. And at a time
+                                when cameras like the Nikon D500, Sony a7S II, and Fuji X-T2 can cleanly shoot at extremely
+                                high ISOs, Olympus have to be a little concerned, especially for the price they are asking
+                                for. While US$2,000 makes sense for existing M4/3 shooters that are interested in the sheer
+                                speed and power of the camera, this won’t convert any photographers using other mounts to
+                                the system. </p>
+                            <p>It will be available in December 2016 for
+                                <a href="https://store.digitalrev.com/product/olympus-om-d-e-m1/MTEwNDkwOQ_A_A?utm_source=editorial&amp;utm_campaign=Olympus%20EM1%20II&amp;utm_medium=bodytext&amp;utm_content=Olympus%20OM-D%20E-M1%20Mark%20II%20Hands-on%20Review">US$2,000</a>.</p>
+                            <figure>
+                                <img alt="@ 1/2000s, f/1.2, ISO 1250" src="https://pictures.digitalrev.com/image/upload/w_1400,c_fill,q_60/v1478252862/ocqaongrjpeanxiaweqr.jpg"
+                                    width="100%">
+                                <p class="caption">@ 1/2000s, f/1.2, ISO 1250</p>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="bk-related-articles">
+                        <!-- ngRepeat: post in article.posts -->
+                        <div class="bk-ra-list ng-scope" ng-repeat="post in article.posts">
+                            <div class="title-opt font-pnova-bold" style="font-family: 'Open Sans',serif; letter-spacing: -0.4px; font-weight: 400;">
+                                <a href="reviews" class="ng-binding">reviews</a>
+                            </div>
+                            <div>
+                                <a ng-href="/article/olympus-omd-em1-mark-ii-hands-on-first-impressions" href="/article/olympus-omd-em1-mark-ii-hands-on-first-impressions">
+                                    <img src="https://pictures.digitalrev.com/image/upload/w_660,h_372,c_fill/v1475143025/xhbjsbilnmjyxpvqchlk.jpg"
+                                        width="100%">
+                                </a>
+                            </div>
+                            <p class="desc font-pnova-semibold">
+                                <a ng-href="/article/olympus-omd-em1-mark-ii-hands-on-first-impressions" class="ng-binding" href="/article/olympus-omd-em1-mark-ii-hands-on-first-impressions">Olympus OM-D E-M1 Mark II: Hands-on First Impressions</a>
+                            </p>
+                        </div>
+                        <!-- end ngRepeat: post in article.posts -->
+                        <div class="bk-ra-list ng-scope" ng-repeat="post in article.posts">
+                            <div class="title-opt font-pnova-bold" style="font-family: 'Open Sans',serif; letter-spacing: -0.4px; font-weight: 400;">
+                                <a href="gear" class="ng-binding">gear</a>
+                            </div>
+                            <div>
+                                <a ng-href="/article/panasonic-lumix-gh5-vs-olympus-om-d-e-m1-mark-ii" href="/article/panasonic-lumix-gh5-vs-olympus-om-d-e-m1-mark-ii">
+                                    <img src="https://pictures.digitalrev.com/image/upload/w_660,h_372,c_fill/v1493202992/lu5jeiputt2bh8gpznj1.jpg"
+                                        width="100%">
+                                </a>
+                            </div>
+                            <p class="desc font-pnova-semibold">
+                                <a ng-href="/article/panasonic-lumix-gh5-vs-olympus-om-d-e-m1-mark-ii" class="ng-binding" href="/article/panasonic-lumix-gh5-vs-olympus-om-d-e-m1-mark-ii">Panasonic Lumix GH5 vs Olympus OM-D E-M1 Mark II</a>
+                            </p>
+                        </div>
+                        <!-- end ngRepeat: post in article.posts -->
+                        <div class="bk-ra-list ng-scope" ng-repeat="post in article.posts">
+                            <div class="title-opt font-pnova-bold" style="font-family: 'Open Sans',serif; letter-spacing: -0.4px; font-weight: 400;">
+                                <a href="gear" class="ng-binding">gear</a>
+                            </div>
+                            <div>
+                                <a ng-href="/article/shooting-snow-with-an-80-s-olympus-zoom-lens" href="/article/shooting-snow-with-an-80-s-olympus-zoom-lens">
+                                    <img src="https://pictures.digitalrev.com/image/upload/w_660,h_372,c_fill/v1486373643/b9tcxerwipk9fkild0oi.jpg"
+                                        width="100%">
+                                </a>
+                            </div>
+                            <p class="desc font-pnova-semibold">
+                                <a ng-href="/article/shooting-snow-with-an-80-s-olympus-zoom-lens" class="ng-binding" href="/article/shooting-snow-with-an-80-s-olympus-zoom-lens">Shooting Snow With An 80's Olympus Zoom Lens</a>
+                            </p>
+                        </div>
+                        <!-- end ngRepeat: post in article.posts -->
+                    </div>
+                    <section id="bkDetailComments" class="bk-detail-comments bk-dt-padd">
+                        <div class="bk-comments-sec-title pr">
+                            <!-- ngIf: article.totalCommentCount > 0 -->
+                            <span ng-if="article.totalCommentCount > 0" class="ng-scope">
+                                <span class="font-tisapro-bold ng-binding">1
+                                    <!-- ngIf: article.totalCommentCount == 1 -->
+                                    <span ng-if="article.totalCommentCount == 1" class="ng-scope">comment.</span>
+                                    <!-- end ngIf: article.totalCommentCount == 1 -->
+                                    <!-- ngIf: article.totalCommentCount > 1 -->
+                                </span>
+                                <span class="hand-pointer font-tisapro-regular" id="totalCommentBtn_2691" ng-click="showComment()">Show them</span>
+                            </span>
+                            <!-- end ngIf: article.totalCommentCount > 0 -->
+                            <!-- ngIf: article.totalCommentCount <= 0 -->
+                            <!-- ngIf: currentUser.id -->
+                            <!-- ngIf: !currentUser.id -->
+                            <span ng-if="!currentUser.id" class="font-pnova-regular ng-scope">
+                                <span class="signin" ng-click="showLoginBox()">Sign In</span>
+                            </span>
+                            <!-- end ngIf: !currentUser.id -->
+                        </div>
+                        <div class="bk-comments-area">
+                            <div class="inner">
+                                <div class="bk-post-area">
+                                    <div id="comment_area_0_2691" class="bk-comm-li clearfix ng-isolate-scope" comment-id="0"
+                                        article-id="2691" user-image="" user-name=" ">
+                                        <div class="bk-comm-pimg">
+                                            <span>
+                                                <!-- ngIf: userImage -->
+                                            </span>
+                                        </div>
+                                        <div class="bk-comm-info">
+                                            <div class="post">
+                                                <div class="bk-com-postarea pr">
+                                                    <textarea maxlength="3000" id="comment_text_2691_0" rows="5" style="overflow: hidden; word-wrap: break-word; resize: none; height: 113px;"></textarea>
+                                                </div>
+                                                <div class="post-btn">
+                                                    <button class="font-pnova-bold" post-comment="">Post
+                                                        <!-- ngIf: userName.length > 1 -->
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ngIf: article.newComment > 0 -->
+                                <div class="bk-comments-list">
+                                    <div class="inner">
+                                        <script type="text/ng-template" id="commentTree"><div class="bk-comm-li clearfix" id="comment_container_{{comment.id}}"> <div class="bk-comm-pimg"> <span> <img ng-if="article.userInfo['id_'+comment.dr_id].personalImage" src="{{article.userInfo['id_'+comment.dr_id].personalImage | formatProfileImage}}" /> </span> </div> <div class="bk-comm-info" id="comment_frame_{{comment.id}}"> <div class="bk-com-userinfo font-pnova-bold"><span class="name">{{article.userInfo['id_'+comment.dr_id].firstName}} {{article.userInfo['id_'+comment.dr_id].lastName}}</span> <span class="post-time font-pnova-semibold">{{comment.createdAt | formatDatetime}}</span> <span class="post-time font-pnova-semibold" id="comment_edited_{{comment.id}}"> <span ng-if="comment.is_edited">(Edited)</span> </span> </div> <div ng-if="comment.is_deleted == false"> <div class="bk-cmt-wrap pr" id="comment_content_{{comment.id}}"> <div id="comment_desc_{{comment.id}}" class="bk-com-content font-tisapro-regular" ng-bind-html="comment.description | noHTML | newlines"></div> <input type="hidden" id="comment_hidden_{{comment.id}}" value="{{comment.description}}" /> </div> <div id="comment_edit_{{comment.id}}" class="hide"> <div class="bk-comm-info-edit"> <div class="post"> <div class="bk-com-postarea"><textarea id="comment_edit_text_{{comment.id}}" maxlength="3000" rows="5"></textarea></div> <div class="post-btn"> <span class="font-pnova-bold post-edit-cancel" ng-click="hideEditor('{{comment.id}}')">Cancel</span> <button class="font-pnova-bold" ng-click="editComment('{{comment.id}}')">Post Edit</button> </div> </div> </div> </div> <div class="bk-com-opts clearfix"> <span id="comment_like_{{comment.id}}_{{comment.post_id}}" ng-class="comment.liked ? 'liked' : 'like'" ng-click="likeComment('{{comment.id}}', '{{comment.post_id}}')"> <i></i> <span id="like_count_{{comment.id}}_{{comment.post_id}}"> <span ng-if="comment.like_count > 0">{{comment.like_count}}</span> </span> </span> <i class="point"> · </i> <reply-comment comment-id="{{comment.id}}" article-id="{{comment.post_id}}" user-image="{{currentUser.personalImage}}" user-name="{{currentUser.firstName}} {{currentUser.lastName}}"></reply-comment> <span ng-if="comment.dr_id==currentUser.id"> <i class="point"> · </i> <span ng-click="showEditor('{{comment.id}}')" class="reply font-pnova-bold" id="edit_btn_{{comment.id}}">EDIT</span> <span class="comment-delete"> <i class="point"> · </i> <span ng-click="beforeDeleteComment('{{comment.id}}', '{{comment.post_id}}')" class="delete font-pnova-bold"><i></i></span> </span> </span> </div> </div> <div ng-if="comment.is_deleted == true" class="bk-com-deleted"> The comment has been removed. </div> </div> <div ng-if="comment.childComments"> <div ng-class="comment.level > 4 ? 'clearfix' : 'nest clearfix'" class="clearfix" ng-repeat="comment in comment.childComments" ng-include="'commentTree'" /> </div> </div></script>
+                                        <!-- ngRepeat: comment in article.comments -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="article-tags bk-dt-padd">
+                        <ul>
+                            <!-- ngIf: article.tags.length -->
+                            <li class="tags font-pnova-semibold-italic ng-scope" ng-if="article.tags.length">
+                                <i></i>
+                                <span class="font-pnova-semibold">TAGS:</span>
+                                <!-- ngRepeat: tag in article.tags -->
+                                <span ng-repeat="tag in article.tags" class="ng-scope">
+                                    <!-- ngIf: $first -->
+                                    <span ng-if="$first" class="ng-scope">
+                                        <a href="/tag/gear" target="_blank" class="ng-binding">Gear</a>
+                                    </span>
+                                    <!-- end ngIf: $first -->
+                                    <!-- ngIf: !$first -->
+                                </span>
+                                <!-- end ngRepeat: tag in article.tags -->
+                                <span ng-repeat="tag in article.tags" class="ng-scope">
+                                    <!-- ngIf: $first -->
+                                    <!-- ngIf: !$first -->
+                                    <span ng-if="!$first" class="ng-scope">,&nbsp;&nbsp;
+                                        <a href="/tag/olympus" target="_blank" class="ng-binding">Olympus</a>
+                                    </span>
+                                    <!-- end ngIf: !$first -->
+                                </span>
+                                <!-- end ngRepeat: tag in article.tags -->
+                                <span ng-repeat="tag in article.tags" class="ng-scope">
+                                    <!-- ngIf: $first -->
+                                    <!-- ngIf: !$first -->
+                                    <span ng-if="!$first" class="ng-scope">,&nbsp;&nbsp;
+                                        <a href="/tag/om-d-e-m1-mark-ii" target="_blank" class="ng-binding">OM-D-E-M1-Mark-II</a>
+                                    </span>
+                                    <!-- end ngIf: !$first -->
+                                </span>
+                                <!-- end ngRepeat: tag in article.tags -->
+                                <span ng-repeat="tag in article.tags" class="ng-scope">
+                                    <!-- ngIf: $first -->
+                                    <!-- ngIf: !$first -->
+                                    <span ng-if="!$first" class="ng-scope">,&nbsp;&nbsp;
+                                        <a href="/tag/mft" target="_blank" class="ng-binding">MFT</a>
+                                    </span>
+                                    <!-- end ngIf: !$first -->
+                                </span>
+                                <!-- end ngRepeat: tag in article.tags -->
+                                <span ng-repeat="tag in article.tags" class="ng-scope">
+                                    <!-- ngIf: $first -->
+                                    <!-- ngIf: !$first -->
+                                    <span ng-if="!$first" class="ng-scope">,&nbsp;&nbsp;
+                                        <a href="/tag/micro-four-thirds" target="_blank" class="ng-binding">Micro-Four-Thirds</a>
+                                    </span>
+                                    <!-- end ngIf: !$first -->
+                                </span>
+                                <!-- end ngRepeat: tag in article.tags -->
+                            </li>
+                            <!-- end ngIf: article.tags.length -->
+                            <!-- ngIf: article.vias.length -->
+                            <!-- ngIf: article.sources.length -->
+                        </ul>
+                    </div>
+                </div>
+                <section class="bk-dt-padd bk-section-subscribe">
+                    <ul>
+                        <li class="share">
+                            <a socialshare="" socialshare-provider="facebook" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" href="#">
+                                <i></i>
+                                <span class="font-pnova-bold">Share</span>
+                            </a>
+                        </li>
+                        <li class="twitter">
+                            <a socialshare="" socialshare-provider="twitter" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" socialshare-via="digitalrev" href="#">
+                                <i></i>
+                                <span class="font-pnova-bold">Tweet</span>
+                            </a>
+                        </li>
+                        <li class="google">
+                            <a socialshare="" socialshare-provider="google+" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" href="#">
+                                <i></i>
+                            </a>
+                        </li>
+                        <li class="more">
+                            <a href="#">
+                                <i></i>
+                            </a>
+                            <div class="moreShares-wrapper">
+                                <div class="moreShares pop-menu" style="display: block;text-align: center;">
+                                    <table style="width: 90%;margin: 0 auto;">
+                                        <tbody>
+                                            <tr>
+                                                <td class="pin">
+                                                    <a socialshare="" socialshare-provider="pinterest" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                                        socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" socialshare-media="https://pictures.digitalrev.com/image/upload/v1478252194/aqr2mpc1lwyxdzhl9ta8.jpg"
+                                                        href="#">
+                                                        <i></i>
+                                                    </a>
+                                                </td>
+                                                <td class="linkin">
+                                                    <a socialshare="" socialshare-provider="linkedin" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                                        socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" href="#">
+                                                        <i></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="stumbleUpon">
+                                                    <a socialshare="" socialshare-provider="stumbleupon" socialshare-url="http://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system"
+                                                        socialshare-text="Olympus OM-D E-M1 Mark II Hands-on Review" socialshare-media="https://pictures.digitalrev.com/image/upload/v1478252194/aqr2mpc1lwyxdzhl9ta8.jpg"
+                                                        href="#">
+                                                        <i></i>
+                                                    </a>
+                                                </td>
+                                                <td class="email">
+                                                    <a href="mailto:?subject=Olympus OM-D E-M1 Mark II Hands-on Review&amp;body=Undoubtedly expensive, but worth it if you need the speedhttp://www.digitalrev.com/article/usd2-000-olympus-om-d-e-m1-mark-ii-is-the-pinnacle-of-micro-four-thirds-system">
+                                                        <i></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="bk-subscribe-email">
+                        <p id="sub_daliy_info_2691" class="font-tisapro-regular">New
+                            <span class="font-pnova-bold">DigitalRev</span> articles delivered to your inbox every morning.</p>
+                        <p id="sub_daliy_err_2691"
+                            class="hide bk-subscribe-email-err font-tisapro-regular">
+                            <span>Invalid email address.</span>
+                        </p>
+                        <div class="bk-sub-email-input">
+                            <div id="sub_daliy_2691">
+                                <input class="no-border" id="daliy_text_2691" type="text" name="email" value="" placeholder="What’s your email?"
+                                    ng-keyup="handleDaliyKeyup($event, article.id)">
+                                <button type="button" name="button" ng-click="subscribeDaliyBokeh('2691')" class="font-tisapro-regular">
+                                    <span>Sign me up</span>
+                                </button>
+                            </div>
+                            <input id="sub_daliy_succ_2691" type="button" name="name" class="thankyou font-pnova-bold hide"
+                                value="Thank you!">
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </section>
+            </article>
+        </div>
+    </div>
+
+    <!-- #main -->
+
+    <!-- #main-container -->
+
+    <div class="footer-container">
+        <footer class="wrapper">
+            <h3>footer</h3>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/interact.min.js"></script>
+    <script src="js/TextHighlighter.js"></script>
+    <script src="js/jquery.textHighlighter.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

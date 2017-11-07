@@ -1,0 +1,603 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://use.fontawesome.com/cd25451a30.js"></script>
+</head>
+
+<body>
+    <div class="header-container">
+        <input type="text" placeholder="Hit enter to add tag" class="search" onkeydown="search(this)" />
+        <br/>
+    </div>
+    <div class="sidebar">
+        <div class="floating-div">
+            <div class="emoji draggable">
+                <img src="img/love.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/happiness.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/indifferent.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/sad.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/check.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/cross.png">
+            </div>
+            <div class="emoji draggable">
+                <img src="img/question.png">
+            </div>
+        </div>
+    </div>
+    <a href="camera6.html">
+        <div class="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+    </a>
+    <div class="main-container">
+        <section class="bk-articles-list ng-scope" ng-repeat="article in articleList" repeat-directive="">
+            <div class="bk-new-timg-wrap">
+                <div class="bk-new-timg">
+                    <div id="title-img-3054" class="title-img" style="background-image: url('https://pictures.digitalrev.com/image/upload/w_1920,c_fill,e_blur:1000,q_70/v1497350501/hzsimqcejaw88d0owtho.jpg')"></div>
+                    <div class="img-cover"></div>
+                </div>
+            </div>
+            <div class="bk-w pr content-padd">
+                <article class="bk-detail-content pr">
+                    <div class="inner">
+                        <div class="article-content article-padd">
+                            <div class="bk-at-top-tags font-pnova-semibold">
+                                <!-- ngRepeat: tag in article.tags -->
+                                <!-- ngIf: $index < 3 -->
+                                <a ng-repeat="tag in article.tags" href="/tag/sony" style="background: #FF5E02;" class="tag-0"
+                                    ng-if="$index < 3">Sony</a>
+                                <!-- end ngIf: $index < 3 -->
+                                <!-- end ngRepeat: tag in article.tags -->
+                                <!-- ngIf: $index < 3 -->
+                                <a ng-repeat="tag in article.tags" href="/tag/a7-iii" style="background: #848781;" class="tag-1"
+                                    ng-if="$index < 3">A7-III</a>
+                                <!-- end ngIf: $index < 3 -->
+                                <!-- end ngRepeat: tag in article.tags -->
+                                <!-- ngIf: $index < 3 -->
+                                <a ng-repeat="tag in article.tags" href="/tag/alpha" style="background: #435365;" class="tag-2"
+                                    ng-if="$index < 3">Alpha</a>
+                                <!-- end ngIf: $index < 3 -->
+                                <!-- end ngRepeat: tag in article.tags -->
+                                <!-- ngIf: $index < 3 -->
+                                <!-- end ngRepeat: tag in article.tags -->
+                            </div>
+                            <h1 class="font-tisapro-regular bk-article-title ng-binding">Sony A7 III Rumours On The Rise</h1>
+                            <h6 class="font-pnova-semibold bk-article-subtitle ng-binding">What's on the cards?</h6>
+                            <div class="bk-article-titleimg">
+                                <!-- ngIf: article.banner_type == 'Image' -->
+                                <div ng-if="article.banner_type == 'Image'" class="ng-scope">
+                                    <div width="100%" url="mainFixImg(article,'w_1920,c_fill,q_40')" custom-src="" class="ng-isolate-scope"
+                                        style="display: block;">
+                                        <img src="https://pictures.digitalrev.com/image/upload/w_1920,c_fill,q_40/v1497350501/hzsimqcejaw88d0owtho.jpg">
+                                    </div>
+                                </div>
+                                <!-- end ngIf: article.banner_type == 'Image' -->
+                                <!-- ngIf: article.banner_type == 'Video' -->
+                            </div>
+                            <div class="sk-dt-post-info font-tisapro-regular ng-binding">
+                                <span class="font-pnova-bold main-color name">BY
+                                    <a ng-show="!article.owner.disable_public_profile" href="/author/61" class="ng-binding">Matt Golowczynski</a>
+                                    <a class="normal ng-binding ng-hide" ng-show="article.owner.disable_public_profile">Matt Golowczynski</a>
+                                </span>
+                                <br>on 12 June 2017</div>
+                            <div class="bk-dt-share clearfix">
+                                <div class="inner pr">
+                                    <div class="font-pnova-bold bk-dt-share-counts">
+                                        <span class="bk-share-t-count ng-binding" ng-show="article.share.count" style="">705</span>
+                                        <span class="bk-share-t-title ng-hide" ng-show="article.share.count == 0"
+                                            style="">SHARE</span>
+                                        <span class="bk-share-t-title" ng-show="article.share.count > 0" style="">Shares</span>
+                                    </div>
+                                    <ul class="bk-dt-share-ul">
+                                        <li class="facebook">
+                                            <a socialshare="" socialshare-provider="facebook" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                socialshare-text="Sony A7 III Rumours On The Rise" href="#">
+                                                <i></i>
+                                            </a>
+                                            <span class="font-pnova-bold">Share
+                                                <b>(1,024)</b>
+                                            </span>
+                                        </li>
+                                        <li class="twitter">
+                                            <a socialshare="" socialshare-provider="twitter" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                socialshare-text="Sony A7 III Rumours On The Rise" socialshare-via="digitalrev"
+                                                href="#">
+                                                <i></i>
+                                            </a>
+                                            <span class="font-pnova-bold">Tweet
+                                                <b>(32)</b>
+                                            </span>
+                                        </li>
+                                        <li class="google">
+                                            <a socialshare="" socialshare-provider="google+" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                socialshare-text="Sony A7 III Rumours On The Rise" href="#">
+                                                <i></i>
+                                            </a>
+                                            <span class="font-pnova-bold">Share</span>
+                                        </li>
+                                        <li class="more">
+                                            <a socialshare="" href="#">
+                                                <i></i>
+                                            </a>
+                                            <span class="font-pnova-bold"></span>
+                                            <div class="moreShares-wrapper">
+                                                <div class="moreShares pop-menu" style="display: block;text-align: center;">
+                                                    <table style="width: 90%;margin: 0 auto;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="pin">
+                                                                    <a socialshare="" socialshare-provider="pinterest" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                                        socialshare-text="Sony A7 III Rumours On The Rise" socialshare-media="https://pictures.digitalrev.com/image/upload/v1497350501/hzsimqcejaw88d0owtho.jpg"
+                                                                        href="#">
+                                                                        <i></i>
+                                                                    </a>
+                                                                </td>
+                                                                <td class="linkin">
+                                                                    <a socialshare="" socialshare-provider="linkedin" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                                        socialshare-text="Sony A7 III Rumours On The Rise" href="#">
+                                                                        <i></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="stumbleUpon">
+                                                                    <a socialshare="" socialshare-provider="stumbleupon" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                                        socialshare-text="Sony A7 III Rumours On The Rise" socialshare-media="https://pictures.digitalrev.com/image/upload/v1497350501/hzsimqcejaw88d0owtho.jpg"
+                                                                        href="#">
+                                                                        <i></i>
+                                                                    </a>
+                                                                </td>
+                                                                <td class="email">
+                                                                    <a href="mailto:?subject=Sony A7 III Rumours On The Rise&amp;body=What's on the cards?http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise">
+                                                                        <i></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- ngIf: $index == 0 -->
+                            <div ng-if="$index == 0" class="ng-scope">
+                                <script id="aniviewJS" src="https://play.aniview.com/5858ed930b8ee8851941a7bb/5983089928a0613893075c78/DigitalRev_Footer.js"></script>
+                            </div>
+                            <!-- end ngIf: $index == 0 -->
+                            <div class="bk-share-div-line clearfix"></div>
+                            <div class="sk-dt-ads-info">
+                                <!-- ngIf: article.is_nsfw == 0 -->
+                                <div id="div-gpt-ad-1433218247580-0" ng-if="article.is_nsfw == 0" data-ng-dfp-ad="div-gpt-ad-1433218247580-0"
+                                    class="ng-scope ng-isolate-scope" style="width: 300px; height: 250px;" data-google-query-id="CKH71MOLrNcCFQeDyAodvY0NxA">
+                                    <div id="google_ads_iframe_/105907171/bokeh03_0__container__" style="border: 0pt none;">
+                                        <iframe id="google_ads_iframe_/105907171/bokeh03_0" title="3rd party ad content" name="google_ads_iframe_/105907171/bokeh03_0"
+                                            width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"
+                                            srcdoc="" style="border: 0px; vertical-align: bottom;"></iframe>
+                                    </div>
+                                </div>
+                                <!-- end ngIf: article.is_nsfw == 0 -->
+                                <!-- ngIf: article.is_nsfw == 1 -->
+                            </div>
+                            <div class="bk-ads-div-line clearfix"></div>
+                            <div id="html" ng-bind-html="article.body" class="ng-binding">
+                                <p>
+                                    <a href="https://store.digitalrev.com/category/sony-dslr-slt/MTY1?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=All%20Sony%20DSLR">Sony</a> has spent the last few years spanking
+                                    <a href="https://store.digitalrev.com/category/sony-dslr-slt/MTY1?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=All%20Sony%20DSLR">DSLR</a> stalwarts
+                                    <a href="https://store.digitalrev.com/category/canon-eos/Mg_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=All%20Canon%20DSLR">Canon</a> and
+                                    <a href="https://store.digitalrev.com/category/nikon/NQ_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=All%20Nikon%20DSLR">Nikon</a> with its
+                                    <a href="https://store.digitalrev.com/search?t=pro&amp;q=Sony%20a7&amp;utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A7%20Series">A7 line</a>, and the most recent
+                                    <a href="https://store.digitalrev.com/product/sony-alpha-a9-body/MTEwNTY0NA_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A9">A9</a> expansion to its mirrorless series has targeted sports and action shooters that
+                                    are currently relying on the likes of the
+                                    <a href="https://store.digitalrev.com/product/canon-eos-1d-x-mark/MTEwNDU5Nw_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Canon%201DX%20Mark%20II">Canon EOS-1D X Mark II</a> and
+                                    <a href="https://store.digitalrev.com/product/nikon-d5-cf/MTEwNDU1OQ_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Nikon%20D5">Nikon D5</a>.</p>
+                                <p>Now, with all three of the company's second-generation
+                                    <a href="https://store.digitalrev.com/search?t=pro&amp;q=Sony%20a7&amp;utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A7%20Series">A7 models</a> firmly set in the marketplace, the next logical step would be to bring
+                                    some of the more recent developments to the next generation of camera – which makes the
+                                    current rumours of an impending A7 III all the more believable.</p>
+                                <p>Given that the
+                                    <a href="https://store.digitalrev.com/search?t=pro&amp;q=Sony%20a7&amp;utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A7%20Series">A7 II</a> (pictured above) was the first of the current-generation
+                                    <a href="https://store.digitalrev.com/search?t=pro&amp;q=Sony%20a7&amp;utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A7%20Series">A7</a> triplet to hit the market back in November 2014, it would logically be the first
+                                    in the series that
+                                    <a href="https://store.digitalrev.com/category/sony-dslr-slt/MTY1?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=All%20Sony%20DSLR">Sony</a> would look to replace. (Checkout the A7 II review video
+                                    <a href="http://tv.digitalrev.com/v/EZ6ntIo9sII/PL7iZ4m0Hqp_iJuJ3KqPI7OCh9qHew04Sv"
+                                        target="_blank">here</a>.) That camera's announcement was followed by the
+                                    <a href="http://store.digitalrev.com/product/sony-alpha-a7r-ii-body/MTEwNDI1MQ_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A7R%20II">A7R II</a> and
+                                    <a href="http://store.digitalrev.com/product/sony-alpha-a7s-ii-body/MTEwNDMzOQ_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A7s%20II">A7S II</a> in 2015, and subsequently the
+                                    <a href="https://store.digitalrev.com/product/sony-a99-mark-ii/MTEwNTI2Nw_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A99%20II">A99 II SLT model</a> and
+                                    <a href="https://store.digitalrev.com/product/sony-alpha-a9-body/MTEwNTY0NA_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A9">A9</a>, so there’s a whole heap of tech that the new model could scoop up.</p>
+                                <p>The current rumours suggest the new model will arrive with the same AF system as the
+                                    <a href="https://store.digitalrev.com/product/sony-alpha-a9-body/MTEwNTY0NA_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A9">A9</a>, which has already attracted much attention. With 693 phase-detect AF points and
+                                    93% frame coverage, the system has wowed those who have managed to get their hands on
+                                    early samples.</p>
+                                <p>The fact that
+                                    <a href="https://store.digitalrev.com/category/sony-dslr-slt/MTY1?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=All%20Sony%20DSLR">Sony</a> has been able to combine this with 20fps and blackout-free shooting has been
+                                    particularly impressive on the
+                                    <a href="https://store.digitalrev.com/product/sony-alpha-a9-body/MTEwNTY0NA_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A9">A9</a>. It seems unlikely, however, that the new model will sport such a lofty burst
+                                    rate, given its traditional positioning as the affordable, all-rounder of the trio.</p>
+                                <p>The new model
+                                    <a href="http://www.digitalrev.com/article/sony-set-to-launch-a7-iii-and-rx100-v-in-june">has been rumoured for some time</a>, although this has stepped a gear recently. Current
+                                    rumours suggest that the model will land in November and will maintain a 24MP sensor,
+                                    although quite whether this will be based on a new or existing design is unclear.
+                                    <a
+                                        href="https://store.digitalrev.com/category/sony-dslr-slt/MTY1?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=All%20Sony%20DSLR">Sony</a> has tended to make incremental changes to sensors for new models, so its entirely
+                                        likely it’s not one we will have seen before.
+                                        <div style="width: 100%; margin: 0px auto; max-width: 640px;">
+                                            <div id="aniBox" style="overflow: hidden; transition: height 1s ease; width: 640px; height: 360px;">
+                                                <div id="aniplayer_" style="">
+                                                    <div id="aniplayer_gui">
+                                                        <div id="av-container" class=" desktop " style="width: 640px; height: 360px;">
+                                                            <div id="av-inner">
+                                                                <div id="slot">
+                                                                    <div id="imgpreloader" style="z-index: 1; display: none;"></div>
+                                                                    <div id="preloader">
+                                                                        <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                                            y="0px" viewBox="0 0 30 30" xml:space="preserve">
+                                                                            <g>
+                                                                                <path d="M23.3,14.9c0-0.4-0.3-0.9-0.8-1.2l-10-6.4c-1.1-0.7-2-0.1-2,1.3v7.5C15.8,13.7,23.1,14.9,23.3,14.9z M23.3,15 c-7.9,0.6-11.4,3.5-12.8,5.7v0.8c0,1.4,0.9,2,2,1.3l10-6.4C23.1,16,23.4,15.5,23.3,15z"></path>
+                                                                            </g>
+                                                                        </svg>
+                                                                        <svg class="circle" width="70" height="70" version="1.1"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <circle cx="35" cy="35" r="32"></circle>
+                                                                        </svg>
+                                                                        <svg class="circle active" width="70" height="70"
+                                                                            version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                                                            <circle cx="35" cy="35" r="32"></circle>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div id="videoslot" class="loaded" style="width: 640px; height: 360px;">
+                                                                        <div id="AVplayer0" style="position: relative; z-index: 99999; width: 640px; height: 360px; top: 0px;">
+                                                                            <video webkit-playsinline="true" preload="auto" src="https://cdn.spotxcdn.com/media/videos/orig/c/5/c52a7db48b7e6b8b444743b3391989a6.mp4"
+                                                                                style="display: block; visibility: visible; width: 640px; height: 360px; object-fit: contain;"
+                                                                                width="640" height="360"></video>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="gui">
+                                                                    <div id="timeline" class=" av-bottom">
+                                                                        <div id="timeline-buffer" style="width: 15.0772%;"></div>
+                                                                        <div id="timeline-moveto"></div>
+                                                                        <div id="timeline-progress" style="width: 14.9108%;"></div>
+                                                                    </div>
+                                                                    <div id="buttons">
+                                                                        <div id="left">
+                                                                            <div id="play-pause" class="play" style="display: inline;"></div>
+                                                                            <div id="phone" style="display: none;">
+                                                                                <div class="icon"></div>
+                                                                                <div id="phone-num"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="right">
+                                                                            <div id="fullscreen" class="off" style="display: none;"></div>
+                                                                            <div id="share" style="display: none;"></div>
+                                                                            <div id="sound" style="display: inline;">
+                                                                                <div class="off"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="big-play" style="display: none; position: absolute; z-index: 99999;"></div>
+                                                                    <div id="timer" style="display: none;">1</div>
+                                                                    <div id="close-btn" style="display: inline;"></div>
+                                                                    <div id="skip-btn" style="display: none;">Skip</div>
+                                                                    <div id="aniview-credit" style="display: inline;">
+                                                                        <span style="height: 14px; width: 80px; background-image: url(&quot;https://play.aniview.com/5858ed930b8ee8851941a7bb/59526d5028a06110545d0877/ads_by_hooly82x15.png&quot;);"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="anibid"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </p>
+                                <p>The new model will almost certainly also arrive with 4K video recording, a feature
+                                    <a href="https://store.digitalrev.com/category/sony-dslr-slt/MTY1?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=All%20Sony%20DSLR">Sony</a> has strongly pushed across its entire Alpha and Cyber-shot portfolio. The
+                                    <a
+                                        href="https://store.digitalrev.com/search?t=pro&amp;q=Sony%20a7&amp;utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A7%20Series">A7 II</a> is currently the most senior model to lack this feature, so its arrival is
+                                        very much expected on an updated version. </p>
+                                <p>It's also likely that 4K video recording would be complemented by the same advanced video
+                                    features that appear on the
+                                    <a href="https://store.digitalrev.com/search?t=pro&amp;q=Sony%20a7&amp;utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A7%20Series">A7 II</a>, such as S-Log2 and a headphone port for audio monitoring. Other features we
+                                    may well see include a touchscreen, a feature that’s made its way into the recent
+                                    <a
+                                        href="https://store.digitalrev.com/product/sony-alpha-a9-body/MTEwNTY0NA_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A9">A9</a> and
+                                        <a href="https://store.digitalrev.com/product/sony-alpha-a6500-body/MTEwNTI5OA_A_A?utm_source=bokeh%20en&amp;utm_medium=body%20text&amp;utm_campaign=Sony%20A6500">A6500</a>, and perhaps an upgraded viewfinder too.</p>
+                                <p>Before the A7 III comes true, read more articles about A7 II
+                                    <a href="https://www.digitalrev.com/article/why-the-sony-a7-mkii-is-great-for-event-photography">Here</a>.</p>
+                            </div>
+                        </div>
+                        <div class="bk-related-articles">
+                            <!-- ngRepeat: post in article.posts -->
+                            <div class="bk-ra-list ng-scope" ng-repeat="post in article.posts">
+                                <div class="title-opt font-pnova-bold" style="font-family: 'Open Sans',serif; letter-spacing: -0.4px; font-weight: 400;">
+                                    <a href="tech" class="ng-binding">tech</a>
+                                </div>
+                                <div>
+                                    <a ng-href="/article/nikon-tease-development-of-full-frame-mirrorless-future" href="/article/nikon-tease-development-of-full-frame-mirrorless-future">
+                                        <img src="https://pictures.digitalrev.com/image/upload/w_660,h_372,c_fill/v1474628097/ctqj5dhz2xob6yzsil4u.jpg"
+                                            width="100%">
+                                    </a>
+                                </div>
+                                <p class="desc font-pnova-semibold">
+                                    <a ng-href="/article/nikon-tease-development-of-full-frame-mirrorless-future" class="ng-binding"
+                                        href="/article/nikon-tease-development-of-full-frame-mirrorless-future">Nikon Tease Development Of Full Frame Mirrorless Future</a>
+                                </p>
+                            </div>
+                            <!-- end ngRepeat: post in article.posts -->
+                            <div class="bk-ra-list ng-scope" ng-repeat="post in article.posts">
+                                <div class="title-opt font-pnova-bold" style="font-family: 'Open Sans',serif; letter-spacing: -0.4px; font-weight: 400;">
+                                    <a href="gear" class="ng-binding">gear</a>
+                                </div>
+                                <div>
+                                    <a ng-href="/article/sony-launches-the-42-megapixel-a7-iii" href="/article/sony-launches-the-42-megapixel-a7-iii">
+                                        <img src="https://pictures.digitalrev.com/image/upload/w_660,h_372,c_fill/v1508942888/xnkefnwsb2yyo7npyuwn.jpg"
+                                            width="100%">
+                                    </a>
+                                </div>
+                                <p class="desc font-pnova-semibold">
+                                    <a ng-href="/article/sony-launches-the-42-megapixel-a7-iii" class="ng-binding" href="/article/sony-launches-the-42-megapixel-a7-iii">Sony Launches the 42-megapixel A7R III</a>
+                                </p>
+                            </div>
+                            <!-- end ngRepeat: post in article.posts -->
+                            <div class="bk-ra-list ng-scope" ng-repeat="post in article.posts">
+                                <div class="title-opt font-pnova-bold" style="font-family: 'Open Sans',serif; letter-spacing: -0.4px; font-weight: 400;">
+                                    <a href="gear" class="ng-binding">gear</a>
+                                </div>
+                                <div>
+                                    <a ng-href="/article/sony-a9-v-nikon-d5" href="/article/sony-a9-v-nikon-d5">
+                                        <img src="https://pictures.digitalrev.com/image/upload/w_660,h_372,c_fill/v1502694861/j3cenffvpxhzmahtxg0w.jpg"
+                                            width="100%">
+                                    </a>
+                                </div>
+                                <p class="desc font-pnova-semibold">
+                                    <a ng-href="/article/sony-a9-v-nikon-d5" class="ng-binding" href="/article/sony-a9-v-nikon-d5">Sony A9 vs Nikon D5 - Which one to get?</a>
+                                </p>
+                            </div>
+                            <!-- end ngRepeat: post in article.posts -->
+                        </div>
+                        <section id="bkDetailComments" class="bk-detail-comments bk-dt-padd">
+                            <div class="bk-comments-sec-title pr">
+                                <!-- ngIf: article.totalCommentCount > 0 -->
+                                <!-- ngIf: article.totalCommentCount <= 0 -->
+                                <span ng-if="article.totalCommentCount <= 0" class="font-tisapro-regular ng-scope">There is no comment yet. Post yours here.</span>
+                                <!-- end ngIf: article.totalCommentCount <= 0 -->
+                                <!-- ngIf: currentUser.id -->
+                                <!-- ngIf: !currentUser.id -->
+                                <span ng-if="!currentUser.id" class="font-pnova-regular ng-scope">
+                                    <span class="signin" ng-click="showLoginBox()">Sign In</span>
+                                </span>
+                                <!-- end ngIf: !currentUser.id -->
+                            </div>
+                            <div class="bk-comments-area">
+                                <div class="inner">
+                                    <div class="bk-post-area">
+                                        <div id="comment_area_0_3054" class="bk-comm-li clearfix ng-isolate-scope" comment-id="0"
+                                            article-id="3054" user-image="" user-name=" ">
+                                            <div class="bk-comm-pimg">
+                                                <span>
+                                                    <!-- ngIf: userImage -->
+                                                </span>
+                                            </div>
+                                            <div class="bk-comm-info">
+                                                <div class="post">
+                                                    <div class="bk-com-postarea pr">
+                                                        <textarea maxlength="3000" id="comment_text_3054_0" rows="5" style="overflow: hidden; word-wrap: break-word; resize: none; height: 113px;"></textarea>
+                                                    </div>
+                                                    <div class="post-btn">
+                                                        <button class="font-pnova-bold" post-comment="">Post
+                                                            <!-- ngIf: userName.length > 1 -->
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ngIf: article.newComment > 0 -->
+                                    <div class="bk-comments-list">
+                                        <div class="inner">
+                                            <script type="text/ng-template" id="commentTree"><div class="bk-comm-li clearfix" id="comment_container_{{comment.id}}"> <div class="bk-comm-pimg"> <span> <img ng-if="article.userInfo['id_'+comment.dr_id].personalImage" src="{{article.userInfo['id_'+comment.dr_id].personalImage | formatProfileImage}}" /> </span> </div> <div class="bk-comm-info" id="comment_frame_{{comment.id}}"> <div class="bk-com-userinfo font-pnova-bold"><span class="name">{{article.userInfo['id_'+comment.dr_id].firstName}} {{article.userInfo['id_'+comment.dr_id].lastName}}</span> <span class="post-time font-pnova-semibold">{{comment.createdAt | formatDatetime}}</span> <span class="post-time font-pnova-semibold" id="comment_edited_{{comment.id}}"> <span ng-if="comment.is_edited">(Edited)</span> </span> </div> <div ng-if="comment.is_deleted == false"> <div class="bk-cmt-wrap pr" id="comment_content_{{comment.id}}"> <div id="comment_desc_{{comment.id}}" class="bk-com-content font-tisapro-regular" ng-bind-html="comment.description | noHTML | newlines"></div> <input type="hidden" id="comment_hidden_{{comment.id}}" value="{{comment.description}}" /> </div> <div id="comment_edit_{{comment.id}}" class="hide"> <div class="bk-comm-info-edit"> <div class="post"> <div class="bk-com-postarea"><textarea id="comment_edit_text_{{comment.id}}" maxlength="3000" rows="5"></textarea></div> <div class="post-btn"> <span class="font-pnova-bold post-edit-cancel" ng-click="hideEditor('{{comment.id}}')">Cancel</span> <button class="font-pnova-bold" ng-click="editComment('{{comment.id}}')">Post Edit</button> </div> </div> </div> </div> <div class="bk-com-opts clearfix"> <span id="comment_like_{{comment.id}}_{{comment.post_id}}" ng-class="comment.liked ? 'liked' : 'like'" ng-click="likeComment('{{comment.id}}', '{{comment.post_id}}')"> <i></i> <span id="like_count_{{comment.id}}_{{comment.post_id}}"> <span ng-if="comment.like_count > 0">{{comment.like_count}}</span> </span> </span> <i class="point"> · </i> <reply-comment comment-id="{{comment.id}}" article-id="{{comment.post_id}}" user-image="{{currentUser.personalImage}}" user-name="{{currentUser.firstName}} {{currentUser.lastName}}"></reply-comment> <span ng-if="comment.dr_id==currentUser.id"> <i class="point"> · </i> <span ng-click="showEditor('{{comment.id}}')" class="reply font-pnova-bold" id="edit_btn_{{comment.id}}">EDIT</span> <span class="comment-delete"> <i class="point"> · </i> <span ng-click="beforeDeleteComment('{{comment.id}}', '{{comment.post_id}}')" class="delete font-pnova-bold"><i></i></span> </span> </span> </div> </div> <div ng-if="comment.is_deleted == true" class="bk-com-deleted"> The comment has been removed. </div> </div> <div ng-if="comment.childComments"> <div ng-class="comment.level > 4 ? 'clearfix' : 'nest clearfix'" class="clearfix" ng-repeat="comment in comment.childComments" ng-include="'commentTree'" /> </div> </div></script>
+                                            <!-- ngRepeat: comment in article.comments -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="article-tags bk-dt-padd">
+                            <ul>
+                                <!-- ngIf: article.tags.length -->
+                                <li class="tags font-pnova-semibold-italic ng-scope" ng-if="article.tags.length">
+                                    <i></i>
+                                    <span class="font-pnova-semibold">TAGS:</span>
+                                    <!-- ngRepeat: tag in article.tags -->
+                                    <span ng-repeat="tag in article.tags" class="ng-scope">
+                                        <!-- ngIf: $first -->
+                                        <span ng-if="$first" class="ng-scope">
+                                            <a href="/tag/sony" target="_blank" class="ng-binding">Sony</a>
+                                        </span>
+                                        <!-- end ngIf: $first -->
+                                        <!-- ngIf: !$first -->
+                                    </span>
+                                    <!-- end ngRepeat: tag in article.tags -->
+                                    <span ng-repeat="tag in article.tags" class="ng-scope">
+                                        <!-- ngIf: $first -->
+                                        <!-- ngIf: !$first -->
+                                        <span ng-if="!$first" class="ng-scope">,&nbsp;&nbsp;
+                                            <a href="/tag/a7-iii" target="_blank" class="ng-binding">A7-III</a>
+                                        </span>
+                                        <!-- end ngIf: !$first -->
+                                    </span>
+                                    <!-- end ngRepeat: tag in article.tags -->
+                                    <span ng-repeat="tag in article.tags" class="ng-scope">
+                                        <!-- ngIf: $first -->
+                                        <!-- ngIf: !$first -->
+                                        <span ng-if="!$first" class="ng-scope">,&nbsp;&nbsp;
+                                            <a href="/tag/alpha" target="_blank" class="ng-binding">Alpha</a>
+                                        </span>
+                                        <!-- end ngIf: !$first -->
+                                    </span>
+                                    <!-- end ngRepeat: tag in article.tags -->
+                                    <span ng-repeat="tag in article.tags" class="ng-scope">
+                                        <!-- ngIf: $first -->
+                                        <!-- ngIf: !$first -->
+                                        <span ng-if="!$first" class="ng-scope">,&nbsp;&nbsp;
+                                            <a href="/tag/mirrorless" target="_blank" class="ng-binding">Mirrorless</a>
+                                        </span>
+                                        <!-- end ngIf: !$first -->
+                                    </span>
+                                    <!-- end ngRepeat: tag in article.tags -->
+                                </li>
+                                <!-- end ngIf: article.tags.length -->
+                                <!-- ngIf: article.vias.length -->
+                                <!-- ngIf: article.sources.length -->
+                                <li class="source font-pnova-semibold-italic ng-scope" ng-if="article.sources.length">
+                                    <i></i>
+                                    <span class="font-pnova-semibold">SOURCE:</span>
+                                    <!-- ngRepeat: source in article.sources -->
+                                    <span ng-repeat="source in article.sources" class="ng-scope">
+                                        <!-- ngIf: $first -->
+                                        <span ng-if="$first" class="ng-scope">
+                                            <a href="http://www.sonyalpharumors.com/sr4-sony-a7iii-announced-fall-24mp-sensor-a9-autofocus-system/"
+                                                target="_blank" class="ng-binding">Sonyalpha Rumours</a>
+                                        </span>
+                                        <!-- end ngIf: $first -->
+                                        <!-- ngIf: !$first -->
+                                    </span>
+                                    <!-- end ngRepeat: source in article.sources -->
+                                </li>
+                                <!-- end ngIf: article.sources.length -->
+                            </ul>
+                        </div>
+                    </div>
+                    <section class="bk-dt-padd bk-section-subscribe">
+                        <ul>
+                            <li class="share">
+                                <a socialshare="" socialshare-provider="facebook" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                    socialshare-text="Sony A7 III Rumours On The Rise" href="#">
+                                    <i></i>
+                                    <span class="font-pnova-bold">Share</span>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a socialshare="" socialshare-provider="twitter" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                    socialshare-text="Sony A7 III Rumours On The Rise" socialshare-via="digitalrev" href="#">
+                                    <i></i>
+                                    <span class="font-pnova-bold">Tweet</span>
+                                </a>
+                            </li>
+                            <li class="google">
+                                <a socialshare="" socialshare-provider="google+" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                    socialshare-text="Sony A7 III Rumours On The Rise" href="#">
+                                    <i></i>
+                                </a>
+                            </li>
+                            <li class="more">
+                                <a href="#">
+                                    <i></i>
+                                </a>
+                                <div class="moreShares-wrapper">
+                                    <div class="moreShares pop-menu" style="display: block;text-align: center;">
+                                        <table style="width: 90%;margin: 0 auto;">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="pin">
+                                                        <a socialshare="" socialshare-provider="pinterest" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                            socialshare-text="Sony A7 III Rumours On The Rise" socialshare-media="https://pictures.digitalrev.com/image/upload/v1497350501/hzsimqcejaw88d0owtho.jpg"
+                                                            href="#">
+                                                            <i></i>
+                                                        </a>
+                                                    </td>
+                                                    <td class="linkin">
+                                                        <a socialshare="" socialshare-provider="linkedin" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                            socialshare-text="Sony A7 III Rumours On The Rise" href="#">
+                                                            <i></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="stumbleUpon">
+                                                        <a socialshare="" socialshare-provider="stumbleupon" socialshare-url="http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise"
+                                                            socialshare-text="Sony A7 III Rumours On The Rise" socialshare-media="https://pictures.digitalrev.com/image/upload/v1497350501/hzsimqcejaw88d0owtho.jpg"
+                                                            href="#">
+                                                            <i></i>
+                                                        </a>
+                                                    </td>
+                                                    <td class="email">
+                                                        <a href="mailto:?subject=Sony A7 III Rumours On The Rise&amp;body=What's on the cards?http://www.digitalrev.com/article/sony-a7-iii-rumours-on-the-rise">
+                                                            <i></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bk-subscribe-email">
+                            <p id="sub_daliy_info_3054" class="font-tisapro-regular">New
+                                <span class="font-pnova-bold">DigitalRev</span> articles delivered to your inbox every morning.</p>
+                            <p id="sub_daliy_err_3054"
+                                class="hide bk-subscribe-email-err font-tisapro-regular">
+                                <span>Invalid email address.</span>
+                            </p>
+                            <div class="bk-sub-email-input">
+                                <div id="sub_daliy_3054">
+                                    <input class="no-border" id="daliy_text_3054" type="text" name="email" value="" placeholder="What’s your email?"
+                                        ng-keyup="handleDaliyKeyup($event, article.id)">
+                                    <button type="button" name="button" ng-click="subscribeDaliyBokeh('3054')" class="font-tisapro-regular">
+                                        <span>Sign me up</span>
+                                    </button>
+                                </div>
+                                <input id="sub_daliy_succ_3054" type="button" name="name" class="thankyou font-pnova-bold hide"
+                                    value="Thank you!">
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </section>
+                </article>
+            </div>
+        </section>Ï
+    </div>
+
+    <!-- #main -->
+
+    <!-- #main-container -->
+
+    <div class="footer-container">
+        <footer class="wrapper">
+            <h3>footer</h3>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/interact.min.js"></script>
+    <script src="js/TextHighlighter.js"></script>
+    <script src="js/jquery.textHighlighter.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
