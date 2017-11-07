@@ -1,4 +1,4 @@
-var tags = ["price"];
+var tags = ["price","professional","vedio resolution"];
 $( document ).ready(function() {
     updateTags();
 });
